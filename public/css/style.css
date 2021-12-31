@@ -1,0 +1,91 @@
+.container-fluid {
+  background-color: #191919;
+}
+.navbar-toggler {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+.nav-link {
+  font-size: 12px;
+}
+.contact {
+  font-weight: bolder;
+}
+.H {
+  font-size: 20px;
+  font-family: "Tahoma";
+  font-weight: bold;
+  text-align: center;
+}
+
+.table {
+  color: burlywood;
+}
+.fab {
+  color: red;
+  font-size: 20px;
+}
+
+.far {
+  color: red;
+}
+
+.fas {
+  color: red;
+}
+.container {
+  color: rgb(211, 15, 15);
+}
+.segment-two h2::before {
+  content: "|";
+  color: red;
+  padding-right: 10px;
+}
+.segment-three h2::before {
+  content: "|";
+  color: red;
+  padding-right: 10px;
+}
+
+.l h2 {
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  line-height: 0.7em;
+  animation: animat 5s linear infinite;
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+@keyframes animat {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #060707;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: rgb(241, 247, 247);
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
+
+.pr-2 {
+  font-size: 15px;
+}

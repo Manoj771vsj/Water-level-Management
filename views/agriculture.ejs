@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hydropower</title>
+  </head>
+  <body style="background-color: rgb(30, 31, 31)">
+    <center>
+      <style>
+        td {
+          padding: 17px;
+        }
+        th {
+          padding: 15px;
+          padding-left: 5px;
+          align-items: center;
+        }
+      </style>
+      <table class="table" style="padding-top: 20px">
+        <thead>
+          <tr style="color: white; font-size: 20px; font-family: verdana">
+            <th>AID</th>
+            <th>SCHEME_NAME</th>
+            <th>IR_ID</th>
+            <th>PADDY_HECTERS</th>
+            <th>WHEAT_HECTERS</th>
+            <th>OTHERS_HECTERS</th>
+            <th>WATER_USAGE</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if(items.length > 0){ %> <% for(var i = 0;i < items.length;i++) {
+          %>
+          <tr
+            style="
+              color: white;
+              font-size: 13px;
+              font-family: Arial;
+              font-weight: bold;
+            "
+          >
+            <td><%= items[i].Aid %></td>
+            <td><%= items[i].Scheme_name %></td>
+            <td><%= items[i].Irid %></td>
+            <td><%= items[i].paddy_hctrs %></td>
+            <td><%= items[i].wheat_hctrs %></td>
+            <td><%= items[i].others_hctrs %></td>
+            <td><%= items[i].water_usage %></td>
+          </tr>
+          <% } %> <% } else{ %>
+          <div class="q">
+            <h1 style="color: red; font-family: Tahoma">Empty</h1>
+          </div>
+          <% } %>
+        </tbody>
+
+        <tbody></tbody>
+      </table>
+    </center>
+    <br /><br /><br /><br />
+    <a
+      style="
+        color: rgb(250, 255, 255);
+        padding-left: 40px;
+        font-family: fantasy;
+      "
+      href="/back"
+      >Back</a
+    >
+  </body>
+</html>
