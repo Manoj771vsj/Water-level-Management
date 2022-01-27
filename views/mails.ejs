@@ -1,0 +1,386 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1f9728490e.js" crossorigin="anonymous"></script>
+    <title>DBMS</title>
+  </head>
+  <body>
+
+<!-- DAM SECTION -->
+<br>
+<h1 class="H"><i class="fab fa-accusoft"></i>     Water Level Monitoring and Dam Management     <i class="fab fa-accusoft"></i></h1>
+<div class="container-fluid" class="bg-dark p-4">
+<nav class="navbar navbar-dark bg-dark">
+  <h1 class="navbar-brand" class="bg-dark p-4"> <i class="fas fa-archway"></i>  Dam</h1>
+  <!-- <div class="container-fluid"> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav>
+  </div>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+    <!-- <ul class="navbar-nav ml-auto"> -->
+            <!-- <li class="nav-item"> -->
+              <!-- <h4 style="color: cyan;" class="nav-link" href="#footer">Contact</h4 style="color: cyan;"> -->
+              <form class="contact" action="/" method="post">
+               
+                  <h1 style="color: aliceblue; font-size: 15px;">View Dam Details</h1>
+          <select name = "dam" value="">
+            <option value="none" selected disabled hidden>Select Dam</option>
+            <% if(items1.length > 0){ %> <% for(var i = 0;i < items1.length;i++) {
+            %>
+             <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items1[i].Dname %></option>
+          <% } %> <% } %>
+          </select>
+
+                <!-- <li class="nav-item"> -->
+                  <!-- <h1 style="color: aliceblue; font-size: 15px;">View Dam Details</h1> -->
+                <!-- <input type="text" name="dam" placeholder="Enter Dam id" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="d1">Submit</button>
+                <br><br>
+                <h1 style="color: aliceblue; font-size: 15px;">View Hydropower Plant of a Dam</h1>
+                <select name = "hydropower" value="">
+                  <option value="none" selected disabled hidden>Select Dam</option>
+                  <% if(items1.length > 0){ %> <% for(var i = 0;i < items1.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);" ><%= items1[i].Dname %></option>
+                <% } %> <% } %>
+                </select>
+
+                <button type="submit" class="btn btn-outline-light" name="button" value="d2">Submit</button>
+              <br><br>
+                <h1 style="color: aliceblue; font-size: 15px;">View Irrigation Schemes of a Dam</h1>
+                <select name = "irrigation" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Dam</option>
+                  <% if(items1.length > 0){ %> <% for(var i = 0;i < items1.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items1[i].Dname %></option>
+                <% } %> <% } %>
+                </select>
+
+                <button type="submit" class="btn btn-outline-light" name="button" value="d3">Submit</button>
+
+              <br><br>
+
+              <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
+              <button type="submit" class="btn btn-outline-light" name="button" value="d5">View All Dam Details</button>
+
+
+                <!-- <li class="nav-item">
+                <input type="text" name="d2" value="d2">
+                <button type="submit" class="btn btn-outline-light" value="d1" name="d1">Contact</button>
+                </li> -->
+                <!-- <button type="submit" class="btn btn-outline-light" value="d1" name="d1">Contact</button> -->
+                  </ul>
+              </form>
+            <!-- </li> -->
+            <!-- <li class="nav-item">
+              <!-- <h4 style="color: cyan;" class="nav-link" href="#pricing">Pricing</h4 style="color: cyan;"> -->
+            <!-- </li>
+            <li class="nav-item">
+              <!-- <h4 style="color: cyan;" class="nav-link" href="#cta">Download</h4 style="color: cyan;"> -->
+            <!-- </li> --> --> -->
+          <!-- </ul> -->
+          </div>
+</div>
+
+<!-- HYDROPOWER SECTION -->
+
+<div class="container-fluid" class="bg-dark p-4">
+<nav class="navbar navbar-dark bg-dark">
+  <h1 class="navbar-brand" class="bg-dark p-4" href=""> <i class="fas fa-bolt"></i>  Hydropower</h1>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav>
+  </div>
+  <div class="collapse" id="navbarToggleExternalContent1">
+    <div class="bg-dark p-4">
+
+              <form class="contact" action="/" method="post">
+
+                  <h1 style="color: aliceblue; font-size: 15px;">View Plant Details</h1>
+                  <select name = "hydropower" value="">
+                    <option value="none" selected disabled hidden>Select Plant</option>
+                    <% if(items2.length > 0){ %> <% for(var i = 0;i < items2.length;i++) {
+                    %>
+                     <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items2[i].Plantname %></option>
+                  <% } %> <% } %>
+                  </select>
+                <button type="submit" class="btn btn-outline-light" name="button" value="h1">Submit</button>
+                <br><br>
+                <h1 style="color: aliceblue; font-size: 15px;">View Industries Linked to Plant</h1>
+                <select name = "industry" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Plant</option>
+                  <% if(items2.length > 0){ %> <% for(var i = 0;i < items2.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items2[i].Plantname %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="industry" placeholder="Enter Plant id" value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="h2">Submit</button>
+              <br><br>
+                <h1 style="color: aliceblue; font-size: 15px;">View Dam Details of Plant</h1>
+                <select name = "dam" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Plant</option>
+                  <% if(items2.length > 0){ %> <% for(var i = 0;i < items2.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items2[i].Plantname %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="dam" placeholder="Enter Plant id" value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="h3">Submit</button>
+
+                <br>
+                <br>
+
+              <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
+              <button type="submit" class="btn btn-outline-light" name="button" value="h5">View All Hydropower Plant Details</button>
+
+                  </ul>
+              </form>
+
+          </div>
+</div>
+
+<!-- INDUSTRY SECTION -->
+
+<div class="container-fluid" class="bg-dark p-4">
+<nav class="navbar navbar-dark bg-dark">
+  <h1 class="navbar-brand" class="bg-dark p-4" href=""><i class="far fa-building"></i> Industry</h1>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav>
+  </div>
+  <div class="collapse" id="navbarToggleExternalContent2">
+    <div class="bg-dark p-4">
+
+              <form class="contact" action="/" method="post">
+
+                  <h1 style="color: aliceblue; font-size: 15px;">View Industry Details</h1>
+                  <select name = "industry" value="">
+                    <option  style="color: cyan;background-color: rgb(31, 30, 30);"value="none" selected disabled hidden>Select Industry</option>
+                    <% if(items3.length > 0){ %> <% for(var i = 0;i < items3.length;i++) {
+                    %>
+                     <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items3[i].plant_name %></option>
+                  <% } %> <% } %>
+                  </select>
+                <!-- <input type="text" name="industry" placeholder="Enter Industry id"value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="i1">Submit</button>
+                <br><br>
+                <h1 style="color: aliceblue; font-size: 15px;">View Dam Details Linked to Industry</h1>
+                <select name = "dam" value="">
+                  <option value="none" selected disabled hidden>Select Industry</option>
+                  <% if(items3.length > 0){ %> <% for(var i = 0;i < items3.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items3[i].plant_name %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="dam" placeholder="Enter Industry id" value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="i2">Submit</button>
+
+                </li>
+
+                <br>
+                <br>
+
+              <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
+              <button type="submit" class="btn btn-outline-light" name="button" value="i5">View All Industry Details</button>
+
+                  </ul>
+              </form>
+
+          </div>
+</div>
+
+<!-- Irrigation Section -->
+
+<div class="container-fluid" class="bg-dark p-4">
+<nav class="navbar navbar-dark bg-dark">
+  <h1 class="navbar-brand" class="bg-dark p-4" href=""><i class="fas fa-water"></i> Irrigation</h1>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav>
+  </div>
+  <div class="collapse" id="navbarToggleExternalContent3">
+    <div class="bg-dark p-4">
+
+              <form class="contact" action="/" method="post">
+
+                  <h1 style="color: aliceblue; font-size: 15px;">View Irrigationscheme Details</h1>
+                  <select name = "irrigation" value="">
+                    <option value="none" selected disabled hidden>Select Scheme</option>
+                    <% if(items4.length > 0){ %> <% for(var i = 0;i < items4.length;i++) {
+                    %>
+                     <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items4[i].Ir_Name %></option>
+                  <% } %> <% } %>
+                  </select>
+                <!-- <input type="text" name="irrigation" placeholder="Enter Irrigation id"value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="i3">Submit</button>
+                <br><br>
+                <h1 style="color: aliceblue; font-size: 15px;">View Crop Details Under Irrigation Scheme</h1>
+                <select name = "agriculture" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Scheme</option>
+                  <% if(items4.length > 0){ %> <% for(var i = 0;i < items4.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items4[i].Ir_Name %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="agriculture" placeholder="Enter Irrigation id" value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="i4">Submit</button>
+                </li>
+
+                <br>
+                <br>
+
+              <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
+              <button type="submit" class="btn btn-outline-light" name="button" value="i6">View All Irrigation Scheme Details</button>
+
+                  </ul>
+              </form>
+
+          </div>
+</div>
+
+<!-- AGRICULTURE SECTION -->
+
+<div class="container-fluid" class="bg-dark p-4">
+<nav class="navbar navbar-dark bg-dark">
+  <h1 class="navbar-brand" class="bg-dark p-4" href=""><i class="fab fa-canadian-maple-leaf"></i> Agriculture</h1>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent4" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav>
+  </div>
+  <div class="collapse" id="navbarToggleExternalContent4">
+    <div class="bg-dark p-4">
+
+              <form class="contact" action="/" method="post">
+                <select name = "agri" value="">
+                  <option value="none" selected disabled hidden>Select Scheme</option>
+                  <% if(items5.length > 0){ %> <% for(var i = 0;i < items5.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items5[i].Scheme_name %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="agri" placeholder="Enter Scheme id"value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="a1">Submit</button>
+                </li>
+
+                <br>
+                <br>
+
+                <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
+                <button type="submit" class="btn btn-outline-light" name="button" value="a5">View All Crop Details</button>
+
+                  </ul>
+              </form>
+
+          </div></div>
+
+<!-- <br><br><br>
+<div class="container-fluid" class="bg-dark p-4">
+  <nav class="navbar navbar-dark bg-dark">
+    <h1 class="navbar-brand" class="bg-dark p-4" href="">Hydropower</h1> -->
+    <br><br>
+    <br>
+
+
+
+<footer><div class="container-fluid bg-dark">
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 segment-one"><br><br><br><br>
+        <div class="l">
+        <h2 style="color: white; font-size: 50px; font-weight: bold;">WLM-DM</h2></div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+        <h2 style="color: rgb(189, 188, 187); font-size: 20px;">CONTACT US</h2><br>
+        <p style="color: cornsilk; line-height: 25px;">
+          SJCE student branch<br>
+Sri Jayachamarajendra College of Engineering<br>
+Mysuru, 570006<br><br>
+ Phone: +(91) 9992200123<br>
+ Email: sjce2022@gmail.com<br>
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 segment-three">
+        <h2 style="color: rgb(189, 188, 187); font-size: 20px;">IMPORTANT LINKS</h2><br>
+       <ul style="color: cyan; font-size: 14px;">
+         <li><a style="color: aliceblue; font-family: Tahoma;" href="#">JSSSTU</a> </li>
+         <li><a style="color: aliceblue; font-family: Tahoma;" href="#">JSSSTU.org</a> </li>
+         <li><a style="color: aliceblue; font-family: Tahoma;"href="#">VTU-WIE</li>
+         <li><a  style="color: aliceblue; font-family: Tahoma;"href="#">IEEE-XPLORE-DIGITAL-library</a> </li>
+         <li><a  style="color: aliceblue; font-family: Tahoma;"href="#">CSI-STANDARDS</a> </li>
+         <li><a style="color: aliceblue; font-family: Tahoma;" href="#">LCC-EDS</a> </li>
+         <li><a style="color: aliceblue; font-family: Tahoma;" href="#">IIC-BANGLORE SECTON</a> </li>
+         <li><a  style="color: aliceblue; font-family: Tahoma;"href="#">AEROJC</a> </li>
+
+       </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+       <a href="#"><i class="fab fa-facebook-f fa-2x text-info"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-twitter fa-2x text-info"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-instagram fa-2x text-info"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i class="fab fa-pinterest-p fa-2x text-info"></i></a><br><br>
+
+        <p  style="color: cornsilk; line-height: 25px;">Follow our official instagram and facebook pages to get regular updates.</p><br><br><br>
+ <form action="/" method="post">
+   <!-- <input   type="text" name="mail" placeholder="E-MAIL">
+   <button  style="color:black; font-weight: 2px;" type="submit" name="button" value="email">Subscribe</button> -->
+
+    <input type="text" name="ma" placeholder="Enter Email id"value="" autocomplete="off">
+    <button type="submit" class="btn btn-outline-light" name="button" value="e1">Submit</button>
+    <script>alert("k");</script>
+
+
+ </form>
+      </div>
+    </div>
+  </div></div>
+
+</footer>
+<footer class="container-fluid bg-dark mt-2 ">
+  <div class="container">
+      <div class="row py-3">
+          <div class="col-md-6"> <!-- start 1st column -->
+            <span style="color: aqua;" class="pr-2">Follow Us:</span>
+            <a href="#" target="_blank" class="pr-2 fi-color"><i style="font-size: 15px;"
+            class="fab fa-facebook-f"></i></a>&nbsp;
+            <a href="#" target="_blank" class="pr-2 fi-color"><i  style="font-size: 15px;"
+            class="fab fa-twitter"></i></a>&nbsp;
+            <a href="#" target="_blank" class="pr-2 fi-color"><i  style="font-size: 15px;"
+            class="fab fa-instagram"></i></a>&nbsp;
+            <a href="#" target="_blank" class="pr-2 fi-color"><i  style="font-size: 15px;"
+            class="fab fa-google-plus-g"></i></a>
+
+
+          </div><!-- end of 1st column -->
+
+            <div style="color: aqua; font-weight: 10px; padding-left: 30px;" class="col-md-6 text-right"> <!-- Start 2nd Column -->
+             Water Resources Management
+
+          </div> <!-- End 2nd Column -->
+   </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+

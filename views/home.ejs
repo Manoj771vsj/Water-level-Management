@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -29,69 +32,49 @@
             <!-- <li class="nav-item"> -->
               <!-- <h4 style="color: cyan;" class="nav-link" href="#footer">Contact</h4 style="color: cyan;"> -->
               <form class="contact" action="/" method="post">
-                <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                           <h4 class="nav-link " style="color: cyan;" aria-current="page">1] Linganamakki</h4>
-                          </li>
-                        <li class="nav-item">
-                          <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >2] supa</h4>
-                          </li>
-                          <li class="nav-item">
-                          <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >3] Varahi</h4>
-                         </li>
-                        <li class="nav-item">
-                       <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >4] Harangi</h4>
-                       </li>
-                    <li class="nav-item">
-                 <h4 class="nav-link active" style="color: cyan;"  aria-current="page">5] Hemavathi</h4>
-                 </li>
-              <li class="nav-item">
-              <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >6] K.R.S</h4>
-            </li>
-            <li class="nav-item">
-           <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >7] Kabini</h4>
-           </li>
-         <li class="nav-item">
-         <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >8] Bhadra</h4>
-       </li>
-      <li class="nav-item">
-      <h4 class="nav-link active" style="color: cyan;" aria-current="page" >9] Tungabhadra</h4>
-      </li>
-     <li class="nav-item">
-    <h4 class="nav-link active" style="color: cyan;"  aria-current="page" >10] Ghataprabha</h4>
-   </li>
-   <li class="nav-item">
-   <h4 class="nav-link active" style="color: cyan;" aria-current="page" >11] Malaprabha</h4>
-  </li>
-   <li class="nav-item">
-  <h4 class="nav-link active" style="color: cyan;"  aria-current="page">12] Almatti</h4>
-  </li>
-  <li class="nav-item">
- <h4 class="nav-link active" style="color: cyan;" aria-current="page" >13] Narayanapura</h4>
-</li>
-                <li class="nav-item">
+               
                   <h1 style="color: aliceblue; font-size: 15px;">View Dam Details</h1>
-                <input type="text" name="dam" placeholder="Enter Dam id" autocomplete="off">
+          <select name = "dam" value="">
+            <option value="none" selected disabled hidden>Select Dam</option>
+            <% if(items1.length > 0){ %> <% for(var i = 0;i < items1.length;i++) {
+            %>
+             <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items1[i].Dname %></option>
+          <% } %> <% } %>
+          </select>
+
+                <!-- <li class="nav-item"> -->
+                  <!-- <h1 style="color: aliceblue; font-size: 15px;">View Dam Details</h1> -->
+                <!-- <input type="text" name="dam" placeholder="Enter Dam id" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="d1">Submit</button>
                 <br><br>
                 <h1 style="color: aliceblue; font-size: 15px;">View Hydropower Plant of a Dam</h1>
-               
-                <input type="text" name="hydropower" placeholder="Enter Dam id" value="" autocomplete="off">
+                <select name = "hydropower" value="">
+                  <option value="none" selected disabled hidden>Select Dam</option>
+                  <% if(items1.length > 0){ %> <% for(var i = 0;i < items1.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);" ><%= items1[i].Dname %></option>
+                <% } %> <% } %>
+                </select>
+
                 <button type="submit" class="btn btn-outline-light" name="button" value="d2">Submit</button>
               <br><br>
                 <h1 style="color: aliceblue; font-size: 15px;">View Irrigation Schemes of a Dam</h1>
-              
-                <input type="text" name="irrigation" placeholder="Enter Dam id" value="" autocomplete="off">
+                <select name = "irrigation" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Dam</option>
+                  <% if(items1.length > 0){ %> <% for(var i = 0;i < items1.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items1[i].Dname %></option>
+                <% } %> <% } %>
+                </select>
+
                 <button type="submit" class="btn btn-outline-light" name="button" value="d3">Submit</button>
 
-               
-              </li>
-              <br>
+              <br><br>
 
               <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
               <button type="submit" class="btn btn-outline-light" name="button" value="d5">View All Dam Details</button>
-                  
-                
+
+
                 <!-- <li class="nav-item">
                 <input type="text" name="d2" value="d2">
                 <button type="submit" class="btn btn-outline-light" value="d1" name="d1">Contact</button>
@@ -125,55 +108,42 @@
     <div class="bg-dark p-4">
 
               <form class="contact" action="/" method="post">
-                <ul class="navbar-nav ml-auto">
-                             <li class="nav-item">
-                            <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">1] R.T.P.S</h4>
-                           </li>
-                          <li class="nav-item">
-                          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">2] B.T.P.S</h4>
-                          </li>
-                       <li class="nav-item">
-                      <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">3] Y.T.P.S</h4>
-                     </li>
-                  <li class="nav-item">
-                  <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">4] Sharavthy</h4>
-                  </li>
-                 <li class="nav-item">
-                <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">5] N.P.H</h4>
-                </li>
-               <li class="nav-item">
-               <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">6] Gerusoppa</h4>
-              </li>
-            <li class="nav-item">
-           <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">7] Kadra</h4>
-           </li>
-          <li class="nav-item">
-          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">8] Kodsally</h4>
-          </li>
-         <li class="nav-item">
-        <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">9] supa</h4>
-       </li>
-      <li class="nav-item">
-     <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">10] M.G.H.E</h4>
-    </li>
-                <li class="nav-item">
+
                   <h1 style="color: aliceblue; font-size: 15px;">View Plant Details</h1>
-                <input type="text" name="hydropower" placeholder="Enter Plant id" value="" autocomplete="off">
+                  <select name = "hydropower" value="">
+                    <option value="none" selected disabled hidden>Select Plant</option>
+                    <% if(items2.length > 0){ %> <% for(var i = 0;i < items2.length;i++) {
+                    %>
+                     <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items2[i].Plantname %></option>
+                  <% } %> <% } %>
+                  </select>
                 <button type="submit" class="btn btn-outline-light" name="button" value="h1">Submit</button>
                 <br><br>
                 <h1 style="color: aliceblue; font-size: 15px;">View Industries Linked to Plant</h1>
-               
-                <input type="text" name="industry" placeholder="Enter Plant id" value="" autocomplete="off">
+                <select name = "industry" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Plant</option>
+                  <% if(items2.length > 0){ %> <% for(var i = 0;i < items2.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items2[i].Plantname %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="industry" placeholder="Enter Plant id" value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="h2">Submit</button>
               <br><br>
                 <h1 style="color: aliceblue; font-size: 15px;">View Dam Details of Plant</h1>
-              
-                <input type="text" name="dam" placeholder="Enter Plant id" value="" autocomplete="off">
+                <select name = "dam" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Plant</option>
+                  <% if(items2.length > 0){ %> <% for(var i = 0;i < items2.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items2[i].Plantname %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="dam" placeholder="Enter Plant id" value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="h3">Submit</button>
-               
-                </li>
+
                 <br>
-              
+                <br>
+
               <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
               <button type="submit" class="btn btn-outline-light" name="button" value="h5">View All Hydropower Plant Details</button>
 
@@ -198,51 +168,34 @@
     <div class="bg-dark p-4">
 
               <form class="contact" action="/" method="post">
-                <ul class="navbar-nav ml-auto">
-                             <li class="nav-item">
-                            <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">1] NTPC LTD</h4>
-                           </li>
-                          <li class="nav-item">
-                          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">2] Karnataka power corporation LTD</h4>
-                          </li>
-                       <li class="nav-item">
-                      <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">3] NTPC-NCL TN LTD </h4>
-                     </li>
-                  <li class="nav-item">
-                  <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">4] Adhani power LTD</h4>
-                  </li>
-                 <li class="nav-item">
-                <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">5] Hinduja National power LTD</h4>
-                </li>
-               <li class="nav-item">
-               <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">6] The GMR Group</h4>
-              </li>
-            <li class="nav-item">
-           <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">7] ACB India LTD</h4>
-           </li>
-          <li class="nav-item">
-          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">8] Essar Power</h4 >
-          </li>
-         <li class="nav-item">
-        <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">9] Reliance Power</h4 >
-       </li>
-      <li class="nav-item">
-     <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">10] Gujarat State Electricity Ltd</h4>
-    </li>
-                <li class="nav-item">
+
                   <h1 style="color: aliceblue; font-size: 15px;">View Industry Details</h1>
-                <input type="text" name="industry" placeholder="Enter Industry id"value="" autocomplete="off">
+                  <select name = "industry" value="">
+                    <option  style="color: cyan;background-color: rgb(31, 30, 30);"value="none" selected disabled hidden>Select Industry</option>
+                    <% if(items3.length > 0){ %> <% for(var i = 0;i < items3.length;i++) {
+                    %>
+                     <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items3[i].plant_name %></option>
+                  <% } %> <% } %>
+                  </select>
+                <!-- <input type="text" name="industry" placeholder="Enter Industry id"value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="i1">Submit</button>
                 <br><br>
                 <h1 style="color: aliceblue; font-size: 15px;">View Dam Details Linked to Industry</h1>
-               
-                <input type="text" name="dam" placeholder="Enter Industry id" value="" autocomplete="off">
+                <select name = "dam" value="">
+                  <option value="none" selected disabled hidden>Select Industry</option>
+                  <% if(items3.length > 0){ %> <% for(var i = 0;i < items3.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items3[i].plant_name %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="dam" placeholder="Enter Industry id" value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="i2">Submit</button>
-              
+
                 </li>
-                
+
                 <br>
-              
+                <br>
+
               <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
               <button type="submit" class="btn btn-outline-light" name="button" value="i5">View All Industry Details</button>
 
@@ -267,44 +220,33 @@
     <div class="bg-dark p-4">
 
               <form class="contact" action="/" method="post">
-                <ul class="navbar-nav ml-auto">
-                             <li class="nav-item">
-                            <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">1] Jogania irrigation Scheme</h4>
-                           </li>
-                          <li class="nav-item">
-                          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">2] Manchipuran irrigation Scheme</h4 >
-                          </li>
-                       <li class="nav-item">
-                      <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">3] Nalitabari sadar irrigation Scheme </h4>
-                     </li>
-                  <li class="nav-item">
-                  <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">4] Nalitabari Purasabha irrigation Scheme</h4 >
-                  </li>
-                 <li class="nav-item">
-                <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">5] Baghbar irrigation Scheme</h4 >
-                </li>
-               <li class="nav-item">
-               <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">6] Nayanbill irrigation Scheme</h4 >
-              </li>
-            <li class="nav-item">
-           <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">7] Ramachandrakrira irrigation Scheme</h4>
-           </li>
-          <li class="nav-item">
-          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">8] Kalaspara irrigation Scheme</h4>
-          </li>
-                <li class="nav-item">
+
                   <h1 style="color: aliceblue; font-size: 15px;">View Irrigationscheme Details</h1>
-                <input type="text" name="irrigation" placeholder="Enter Irrigation id"value="" autocomplete="off">
+                  <select name = "irrigation" value="">
+                    <option value="none" selected disabled hidden>Select Scheme</option>
+                    <% if(items4.length > 0){ %> <% for(var i = 0;i < items4.length;i++) {
+                    %>
+                     <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items4[i].Ir_Name %></option>
+                  <% } %> <% } %>
+                  </select>
+                <!-- <input type="text" name="irrigation" placeholder="Enter Irrigation id"value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="i3">Submit</button>
                 <br><br>
                 <h1 style="color: aliceblue; font-size: 15px;">View Crop Details Under Irrigation Scheme</h1>
-               
-                <input type="text" name="agriculture" placeholder="Enter Irrigation id" value="" autocomplete="off">
+                <select name = "agriculture" value="">
+                  <option style="color: cyan;background-color: rgb(31, 30, 30);" value="none" selected disabled hidden>Select Scheme</option>
+                  <% if(items4.length > 0){ %> <% for(var i = 0;i < items4.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items4[i].Ir_Name %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="agriculture" placeholder="Enter Irrigation id" value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="i4">Submit</button>
                 </li>
-                
+
                 <br>
-              
+                <br>
+
               <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
               <button type="submit" class="btn btn-outline-light" name="button" value="i6">View All Irrigation Scheme Details</button>
 
@@ -329,38 +271,20 @@
     <div class="bg-dark p-4">
 
               <form class="contact" action="/" method="post">
-                <ul class="navbar-nav ml-auto">
-                             <li class="nav-item">
-                            <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">1] PM kisan scheme</h4>
-                           </li>
-                          <li class="nav-item">
-                          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">2] PM kisan Maandhan yojan</h4 >
-                          </li>
-                       <li class="nav-item">
-                      <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">3] PM fasal bima yojan </h4 >
-                     </li>
-                  <li class="nav-item">
-                  <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">4] PKCCS</h4>
-                  </li>
-                 <li class="nav-item">
-                <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">5] PKVY</h4 >
-                </li>
-               <li class="nav-item">
-               <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">6] PMKSY</h4>
-              </li>
-            <li class="nav-item">
-           <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">7] RADP</h4>
-           </li>
-          <li class="nav-item">
-          <h4 style="color: cyan;" class="nav-link active" aria-current="page" href="">8] NMSA</h4>
-          </li>
-                <li class="nav-item">
-                <input type="text" name="agri" placeholder="Enter Scheme id"value="" autocomplete="off">
+                <select name = "agri" value="">
+                  <option value="none" selected disabled hidden>Select Scheme</option>
+                  <% if(items5.length > 0){ %> <% for(var i = 0;i < items5.length;i++) {
+                  %>
+                   <option style="color: cyan;background-color: rgb(31, 30, 30);"><%= items5[i].Scheme_name %></option>
+                <% } %> <% } %>
+                </select>
+                <!-- <input type="text" name="agri" placeholder="Enter Scheme id"value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="a1">Submit</button>
                 </li>
 
                 <br>
-              
+                <br>
+
                 <!-- <input type="text" name="dam" placeholder="Enter All" value="" autocomplete="off"> -->
                 <button type="submit" class="btn btn-outline-light" name="button" value="a5">View All Crop Details</button>
 
@@ -375,7 +299,7 @@
     <h1 class="navbar-brand" class="bg-dark p-4" href="">Hydropower</h1> -->
     <br><br>
     <br>
-   
+
 
 
 <footer><div class="container-fluid bg-dark">
@@ -407,7 +331,7 @@ Mysuru, 570006<br><br>
          <li><a style="color: aliceblue; font-family: Tahoma;" href="#">LCC-EDS</a> </li>
          <li><a style="color: aliceblue; font-family: Tahoma;" href="#">IIC-BANGLORE SECTON</a> </li>
          <li><a  style="color: aliceblue; font-family: Tahoma;"href="#">AEROJC</a> </li>
-        
+
        </ul>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
@@ -415,16 +339,27 @@ Mysuru, 570006<br><br>
         <a href="#"><i class="fab fa-twitter fa-2x text-info"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="#"><i class="fab fa-instagram fa-2x text-info"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="#"><i class="fab fa-pinterest-p fa-2x text-info"></i></a><br><br>
-         
+
         <p  style="color: cornsilk; line-height: 25px;">Follow our official instagram and facebook pages to get regular updates.</p><br><br><br>
- <form action="">
-   <input  ; type="email" placeholder="E-MAIL">
-   <input  style="color:black; font-weight: 2px;" type="submit" value="Subscribe">
+ <form action="/" method="post">
+   <!-- <input   type="text" name="mail" placeholder="E-MAIL">
+   <button  style="color:black; font-weight: 2px;" type="submit" name="button" value="email">Subscribe</button> -->
+
+    <input type="text" name="ma" placeholder="Enter Email id"value="" autocomplete="off">
+    <button onclick="myFunction()" type="submit" class="btn btn-outline-light" name="button" value="e1">Submit</button>
+    <script>
+      function myFunction(){
+        alert("U have subscribed succesfully!!");
+      }
+    </script>
+  
+
+
  </form>
       </div>
     </div>
   </div></div>
-  
+
 </footer>
 <footer class="container-fluid bg-dark mt-2 ">
   <div class="container">
@@ -439,13 +374,13 @@ Mysuru, 570006<br><br>
             class="fab fa-instagram"></i></a>&nbsp;
             <a href="#" target="_blank" class="pr-2 fi-color"><i  style="font-size: 15px;"
             class="fab fa-google-plus-g"></i></a>
-          
-           
+
+
           </div><!-- end of 1st column -->
-         
+
             <div style="color: aqua; font-weight: 10px; padding-left: 30px;" class="col-md-6 text-right"> <!-- Start 2nd Column -->
              Water Resources Management
-            
+
           </div> <!-- End 2nd Column -->
    </div>
   </div>
@@ -453,3 +388,4 @@ Mysuru, 570006<br><br>
 
   </body>
 </html>
+
